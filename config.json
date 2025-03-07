@@ -1,0 +1,90 @@
+{
+    "livebench": {
+        "instruction_following": {
+            "data_source": "livebench/instruction_following",
+            "response_path": "results/LiveBench/responses/livebench_if_response.csv",
+            "judgement_path": "results/LiveBench/judgements/livebench_if_judgement.csv",
+            "llms": 
+            ["openai/o3-mini-2025-01-31",
+            "anthropic/claude-3-7-sonnet-20250219",
+            "gemini/gemini-2.0-flash"
+            ]
+        },
+        "language": {
+            "data_source": "livebench/language",
+            "response_path": "results/LiveBench/responses/livebench_lang_response.csv",
+            "judgement_path": "results/LiveBench/judgements/livebench_lang_judgement.csv",
+            "llms": 
+            ["openai/o3-mini-2025-01-31",
+            "anthropic/claude-3-7-sonnet-20250219",
+            "gemini/gemini-2.0-flash"
+            ],
+            "judges": 
+            ["openai/o3-mini-2025-01-31",
+            "anthropic/claude-3-7-sonnet-20250219",
+            "gemini/gemini-2.0-flash-thinking-exp"
+            ]
+        },
+        "coding": {
+            "data_source": "livebench/coding",
+            "response_path": "results/LiveBench/responses/livebench_coding_response.csv",
+            "judgement_path": "results/LiveBench/judgements/livebench_coding_judgement.csv",
+            "llms": 
+            ["openai/o3-mini-2025-01-31",
+            "anthropic/claude-3-7-sonnet-20250219",
+            "gemini/gemini-2.0-flash"
+            ],
+            "judges": 
+            ["openai/o3-mini-2025-01-31",
+            "anthropic/claude-3-7-sonnet-20250219",
+            "gemini/gemini-2.0-flash-thinking-exp"
+            ]
+        },
+        "data_analysis": {
+            "data_source": "livebench/data_analysis",
+            "response_path": "results/LiveBench/responses/livebench_data_analysis_response.csv",
+            "judgement_path": "results/LiveBench/judgements/livebench_data_analysis_judgement.csv",
+            "llms": 
+            ["openai/o3-mini-2025-01-31",
+            "anthropic/claude-3-7-sonnet-20250219",
+            "gemini/gemini-2.0-flash-thinking-exp"
+            ],
+            "judges": 
+            ["openai/o3-mini-2025-01-31",
+            "anthropic/claude-3-7-sonnet-20250219",
+            "gemini/gemini-2.0-flash-thinking-exp"
+            ]
+        },
+        "reasoning": {
+            "data_source": "livebench/reasoning",
+            "response_path": "results/LiveBench/responses/livebench_reasoning_response.csv",
+            "judgement_path": "results/LiveBench/judgements/livebench_reasoning_judgement.csv",
+            "llms": 
+            ["openai/o3-mini-2025-01-31",
+            "anthropic/claude-3-7-sonnet-20250219",
+            "gemini/gemini-2.0-flash-thinking-exp"
+            ],
+            "judges":
+            ["openai/o3-mini-2025-01-31",
+            "anthropic/claude-3-7-sonnet-20250219",
+            "gemini/gemini-2.0-flash-thinking-exp"
+            ]
+        },
+        "math": {
+            "data_source": "livebench/math",
+            "response_path": "results/LiveBench/responses/livebench_math_response.csv",
+            "judgement_path": "results/LiveBench/judgements/livebench_math_judgement.csv",
+            "llms": 
+            ["openai/o3-mini-2025-01-31",
+            "anthropic/claude-3-7-sonnet-20250219",
+            "gemini/gemini-2.0-flash-thinking-exp"
+            ],
+            "judges": 
+            ["openai/o3-mini-2025-01-31",
+            "anthropic/claude-3-7-sonnet-20250219",
+            "gemini/gemini-2.0-flash-thinking-exp"
+            ]
+        }
+    },
+    "tiebreaker_judge": "o1-preview"
+}
