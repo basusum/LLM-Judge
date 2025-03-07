@@ -62,8 +62,8 @@ Both the judges use the same rubric to evaluate.
 <table>
   <tr>
     <th>Category</th>
-    <th>Original Plot</th>
-    <th>Majority Voting Plot</th>
+    <th>Preference Per Model</th>
+    <th>Majority Voting</th>
   </tr>
   <tr>
     <td><strong>Instruction Following</strong></td>
