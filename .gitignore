@@ -1,1 +1,18 @@
 .DS_Store
+.AppleDouble
+.LSOverride
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+build/
+dist/
+*.egg-info/
+
+.vscode/
+.idea/
+
+# Log and temporary files
+*.log
+*.tmp
