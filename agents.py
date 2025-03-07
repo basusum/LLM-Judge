@@ -104,7 +104,7 @@ class Judge(Agent):
                 score, reason = self._extract_score(response)
                 if score is not None and reason is not None:
                     return score, reason
-                print('Invalid Score:', score, response)
+                print('Invalid Score:', score, reason)
                 feedback = f"Invalid Score. Try Again. Make sure to the overall score is an integer. "+self.SCORING_PROMPT
                 judge_prompt = feedback + original_prompt # to avoid accumulating feedback
                 tries += 1
@@ -126,6 +126,7 @@ class Judge(Agent):
             if llm_output is not None:
                 # print('llm out:', llm_output)
                 preference, feedback = self._extract_preference(llm_output, len(answers))
+                # print('preference:', preference)
                 if preference is not None:
                     return preference
                 judge_prompt = feedback + original_prompt

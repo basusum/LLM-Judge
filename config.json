@@ -4,6 +4,7 @@
             "data_source": "livebench/instruction_following",
             "response_path": "results/LiveBench/responses/livebench_if_response.csv",
             "judgement_path": "results/LiveBench/judgements/livebench_if_judgement.csv",
+            "voting_path": "results/LiveBench/voting/livebench_if_judgement.csv",
             "llms": 
             ["openai/o3-mini-2025-01-31",
             "anthropic/claude-3-7-sonnet-20250219",
@@ -14,6 +15,7 @@
             "data_source": "livebench/language",
             "response_path": "results/LiveBench/responses/livebench_lang_response.csv",
             "judgement_path": "results/LiveBench/judgements/livebench_lang_judgement.csv",
+            "voting_path": "results/LiveBench/voting/livebench_lang_judgement.csv",
             "llms": 
             ["openai/o3-mini-2025-01-31",
             "anthropic/claude-3-7-sonnet-20250219",
@@ -29,6 +31,7 @@
             "data_source": "livebench/coding",
             "response_path": "results/LiveBench/responses/livebench_coding_response.csv",
             "judgement_path": "results/LiveBench/judgements/livebench_coding_judgement.csv",
+            "voting_path": "results/LiveBench/voting/livebench_coding_judgement.csv",
             "llms": 
             ["openai/o3-mini-2025-01-31",
             "anthropic/claude-3-7-sonnet-20250219",
@@ -44,6 +47,7 @@
             "data_source": "livebench/data_analysis",
             "response_path": "results/LiveBench/responses/livebench_data_analysis_response.csv",
             "judgement_path": "results/LiveBench/judgements/livebench_data_analysis_judgement.csv",
+            "voting_path": "results/LiveBench/voting/livebench_data_analysis_judgement.csv",
             "llms": 
             ["openai/o3-mini-2025-01-31",
             "anthropic/claude-3-7-sonnet-20250219",
@@ -59,6 +63,7 @@
             "data_source": "livebench/reasoning",
             "response_path": "results/LiveBench/responses/livebench_reasoning_response.csv",
             "judgement_path": "results/LiveBench/judgements/livebench_reasoning_judgement.csv",
+            "voting_path": "results/LiveBench/voting/livebench_reasoning_judgement.csv",
             "llms": 
             ["openai/o3-mini-2025-01-31",
             "anthropic/claude-3-7-sonnet-20250219",
@@ -74,6 +79,7 @@
             "data_source": "livebench/math",
             "response_path": "results/LiveBench/responses/livebench_math_response.csv",
             "judgement_path": "results/LiveBench/judgements/livebench_math_judgement.csv",
+            "voting_path": "results/LiveBench/voting/livebench_math_judgement.csv",
             "llms": 
             ["openai/o3-mini-2025-01-31",
             "anthropic/claude-3-7-sonnet-20250219",
