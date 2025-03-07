@@ -22,7 +22,7 @@ Livebench:
 
 # Self-bias in LLM as Judge
 
-This repository implements a pipeline where the same large language models (LLMs) are used for both generating responses and evaluating (judging) those responses. The framework leverages the Livebench dataset across multiple task categories to assess model performance.
+This repository implements a pipeline where the same large language models (LLMs) are used for both generating responses and evaluating (judging) those responses. The framework leverages the Livebench dataset across multiple task categories to assess model performance. The objective is to investigate self preference of the LLMs across tasks.
 
 ### Overview
 #### Data Generation
