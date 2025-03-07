@@ -81,9 +81,9 @@ class Judge(Agent):
             # print('pref idx:', preference_idx, 'num choices:', num_choices)
             if preference_idx <= num_choices:
                 preference = preference_idx - 1
-            # print('pref:', preference)
-            return preference, feedback
-        print('Invalid Response Number.')
+                # print('pref:', preference)
+                return preference, feedback
+        print('Invalid Response Number. Trying again.')
         feedback = f"Invalid Response. Try Again. Make sure to pick only one of the available response numbers. Return the number only. "+self.PREFERENCE_PROMPT
         return preference, feedback
 

@@ -25,6 +25,20 @@ def create_output_file(file_path):
         df = pd.DataFrame()
     return df
 
+def find_missing(df):
+    missing_flag = False
+    # blank_cells = pd.DataFrame(columns=['row_idx', 'col_idx', 'col_name'])
+    for row_idx in range(df.shape[0]):
+        for col_idx, col_name in enumerate(df.columns):
+            cell_value = df.iat[row_idx, col_idx]
+            # Check if the cell is NaN or an empty string after stripping whitespace
+            if pd.isna(cell_value) or (isinstance(cell_value, str) and cell_value.strip() == ""):
+                print(f"Empty cell found at row {row_idx}, column {col_idx} (column name: '{col_name}').")
+                # blank_cells.loc[len(blank_cells)] = [row_idx, col_idx, col_name]
+                missing_flag = True
+    return True if missing_flag else False
+
+
 def generate_responses(config, start_index=None, end_index=None):
     # Data Load
     data_df = load_dataset(config["data_source"], split='test')
@@ -64,17 +78,18 @@ def judge_score(config, start_index=None, end_index=None):
         print('\nJudge:', model)
         judge = Judge(model)
         for index in range(start_index, end_index):
-            print(f'Scoring Question {index}.')
+            print(f'\nScoring Question {index}.')
             for responding_llm in config["llms"]:
-                print('\nResponding LLM:', responding_llm)
+                print('Responding LLM:', responding_llm)
                 score, reason = judge.get_score(judgement_df.loc[index,'question'], judgement_df.loc[index, responding_llm])
-                if score is not None:
+                if score is not None and reason is not None:
                     score_key = model+'_SCORING_'+responding_llm
                     judgement_df.loc[index, score_key] = score
-                if reason is not None:
                     reason_key = model+'_SR_'+responding_llm
                     judgement_df.loc[index, reason_key] = reason
-                judgement_df.to_csv(config["judgement_path"], index=False)
+                    judgement_df.to_csv(config["judgement_path"], index=False)
+                else:
+                    print(f"prompt {index} didn't produce any ouput.")
 
 def judge_preference(config, start_index=None, end_index=None):
     # load responses
@@ -97,5 +112,11 @@ def judge_preference(config, start_index=None, end_index=None):
                 preference = config["llms"][int(preference)]
                 pref_key = model+'_PREFERENCE'
                 judgement_df.loc[index, pref_key] = preference
-            judgement_df.to_csv(config["judgement_path"], index=False)
+                judgement_df.to_csv(config["judgement_path"], index=False)
+            else:
+                print(f"prompt {index} didn't produce any ouput.")
 
+
+# for MTBench and PPE
+def read_json():
+    pass
