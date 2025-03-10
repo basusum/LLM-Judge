@@ -86,6 +86,11 @@ Both the judges use the same rubric to evaluate.
     <td><img src="results/plots/LiveBench_majority_voting_math.png" alt="Majority Voting Math" style="width:300px;"></td>
   </tr>
   <tr>
+    <td><strong>Reasoning</strong></td>
+    <td><img src="results/plots/LiveBench_reasoning.png" alt="Math" style="width:600px;"></td>
+    <td><img src="results/plots/LiveBench_majority_voting_reasoning.png" alt="Majority Voting Math" style="width:300px;"></td>
+  </tr>
+  <tr>
     <td><strong>Data Analysis</strong></td>
     <td><img src="results/plots/LiveBench_data_analysis.png" alt="Data Analysis" style="width:600px;"></td>
     <td><img src="results/plots/LiveBench_majority_voting_data_analysis.png" alt="Majority Voting Data Analysis" style="width:300px;"></td>
