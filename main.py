@@ -2,8 +2,6 @@ from utils import *
 # from experiments import *
 import argparse
 
-os.environ["litellm_key"]="sk-EtvD1bxoKo1pMumd_EwIUg"
-
 def run_experiment(config, **kwargs):
     if kwargs['respond']:
         generate_responses(config, start_index=kwargs['start_index'], end_index=kwargs['end_index'])
