@@ -135,3 +135,7 @@ You can adjust the parameters as needed:
 - `--respond`: Flag to generate responses
 - `--score`: Flag to generate scores
 - `--prefer`: Flag to generate preferences
+
+### Future Direction
+- Experiment with the rubric, and investigate whether it changes the preferences
+- Verify the final responses against the ground truth for domains where it's applicable (eg. math, reasoning etc.). This will help understand whether `o3-mini` is really better than the other two models in terms of correctness. If so, preferring `o3-mini`'s responses by a `o3-mini` judge cannot be labeled as self-bias, otherwise it provides concrete evidence of self-bias.
